@@ -48,6 +48,9 @@ return [
             'free2play',
         ],
     ],
+    'build' => [
+        'artifact_directory' => env('GJALLR_BUILD_ARTIFACT_DIRECTORY', 'gjallr/build'),
+    ],
     'samples' => [
         'default' => [
             'sql_dump' => env('GJALLR_SAMPLE_SQL_DUMP', '/Users/odinn/Projects/old/odinns/old-2/odinns_dk_db_tantraviking.sql'),
