@@ -1,0 +1,7 @@
+parameters:
+    paths:
+        - app
+        - config
+        - tests
+    level: 5
+    tmpDir: storage/phpstan
