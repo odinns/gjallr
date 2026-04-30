@@ -48,7 +48,7 @@ Set a real user agent before making archive requests:
 WAYBACK_MACHINE_USER_AGENT="gjallr-site-rescue/1.0 (you@example.com)"
 ```
 
-## Import And Serve
+## Import And Browse The Rescued Site
 
 ```bash
 php artisan gjallr:import \
@@ -56,6 +56,22 @@ php artisan gjallr:import \
   --site-path=/path/to/site-root \
   --source-label="my old site"
 ```
+
+After import, Gjallr is already a runnable Laravel app. It serves the rescued homepage, content pages, taxonomy archives, navigation menus, comments, and media through normal Laravel routes. No WordPress boot. No plugin roulette. Just the rescued material in a clean runtime.
+
+Open the app and browse it:
+
+```text
+https://gjallr.test/
+```
+
+Each content page also exposes AI-friendly JSON:
+
+```text
+https://gjallr.test/some-page?format=json
+```
+
+That JSON includes the site metadata, page body HTML, SEO fields, route path, taxonomies, media, comments, and menus. It is meant for builders and AI agents that need structured evidence while rebuilding the site as a real Laravel application.
 
 Gjallr stores media URLs as `/rescued-media/{path}`. Runtime media lookup checks the old local WordPress upload first, then Gjallr-owned recovered storage. If neither exists, it returns 404.
 
