@@ -59,16 +59,16 @@ php artisan gjallr:import \
 
 After import, Gjallr is already a runnable Laravel app. It serves the rescued homepage, content pages, taxonomy archives, navigation menus, comments, and media through normal Laravel routes. No WordPress boot. No plugin roulette. Just the rescued material in a clean runtime.
 
-Open the app and browse it:
+Open the app at whatever host you use for local development or deployment:
 
 ```text
-https://gjallr.test/
+https://your-rescue-app.test/
 ```
 
 Each content page also exposes AI-friendly JSON:
 
 ```text
-https://gjallr.test/some-page?format=json
+https://your-rescue-app.test/some-page?format=json
 ```
 
 That JSON includes the site metadata, page body HTML, SEO fields, route path, taxonomies, media, comments, and menus. It is meant for builders and AI agents that need structured evidence while rebuilding the site as a real Laravel application.
