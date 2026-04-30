@@ -10,6 +10,7 @@ it('writes a build dossier for human and ai reconstruction', function (): void {
     DB::connection('wordpress')->unprepared(File::get(base_path('tests/Fixtures/wordpress-import-fixture.sql')));
 
     Artisan::call('gjallr:import', [
+        '--sql-dump' => base_path('tests/Fixtures/wordpress-sample/sample.sql'),
         '--site-path' => base_path('tests/Fixtures/wordpress-sample/site'),
         '--source-label' => 'fixture import',
     ]);
