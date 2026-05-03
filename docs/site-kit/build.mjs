@@ -79,7 +79,7 @@ const featureSections = (sections) =>
     <h2>${escapeHtml(section.title)}</h2>
     <p>${escapeHtml(section.body)}</p>
   </div>
-  <div class="feature-grid">
+  <div class="feature-grid feature-grid-${section.items.length}">
     ${section.items
       .map(
         (item) => `<article class="handoff-card">
