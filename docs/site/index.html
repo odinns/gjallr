@@ -22,6 +22,8 @@
   <nav class="site-nav" aria-label="Main navigation">
     <a class="nav-link" href="#saves">Saves</a>
 <a class="nav-link" href="#pipeline">Pipeline</a>
+<a class="nav-link" href="#ai-handoff">AI handoff</a>
+<a class="nav-link" href="#showcase">Showcase</a>
 <a class="nav-link" href="#boundary">Boundary</a>
 <a class="nav-link" href="#why-gjallr">Name</a>
   </nav>
@@ -32,7 +34,7 @@
   <div class="hero-copy">
     <p class="kicker">WordPress salvage for Laravel builders</p>
     <h1>Rescue dead WordPress sites. Rebuild them properly.</h1>
-    <p class="lede">Gjallr extracts the useful ore from a broken WordPress install: content, comments, URLs, menus, media records, SEO fields, and enough archive evidence to rebuild with intent instead of panic.</p>
+    <p class="lede">Gjallr extracts the useful ore from a broken WordPress install, then writes the evidence a website builder can hand to an AI with frontend taste. Salvage first. Rebuild properly after.</p>
     <div class="hero-actions">
       <a class="button button-primary" href="https://github.com/odinns/gjallr">View on GitHub</a>
       <a class="button button-secondary" href="https://github.com/odinns/gjallr#readme">Read the README</a>
@@ -117,7 +119,7 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
     </article>
 <article class="feature-card">
       <h3>No finished-site illusion</h3>
-      <p>The build command writes dossiers. Humans and AI can use them to rebuild properly.</p>
+      <p>The build command writes dossiers. A builder directs the rebuild. A frontend-capable AI can help turn the evidence into the finished Laravel site.</p>
     </article>
   </div>
 </section>
@@ -160,10 +162,63 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
   <span class="step-marker" aria-hidden="true"></span>
   <div>
     <h3>Build</h3>
-    <p>Write reconstruction dossiers with inventories, paths, media status, redirects, and builder notes.</p>
+    <p>Write reconstruction dossiers with inventories, paths, media status, redirects, builder notes, and enough context for an AI-assisted frontend rebuild.</p>
   </div>
 </li>
   </ol>
+</section>
+
+      <section class="section-shell ai-handoff" id="ai-handoff" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">AI handoff</p>
+    <h2>The builder still drives.</h2>
+    <p>Gjallr is meant to hand a website builder clean evidence: rescued routes, content, media status, SEO clues, archive snapshots, and rebuild notes. The builder can then direct a frontend-skilled AI agent to produce the real site instead of guessing from rubble.</p>
+  </div>
+  <div class="handoff-grid">
+    <article class="handoff-card">
+  <h3>Give the AI evidence</h3>
+  <p>Use the dossier, JSON page views, recovered media paths, old URLs, and Wayback references as the source material.</p>
+</article>
+<article class="handoff-card">
+  <h3>Keep taste with the builder</h3>
+  <p>The AI can draft layouts, components, copy structure, and responsive details. The builder decides what survives.</p>
+</article>
+<article class="handoff-card">
+  <h3>Useful agent brief</h3>
+  <p>Rebuild this as a clean Laravel frontend. Preserve content intent, routes, SEO context, and media evidence. Do not recreate WordPress.</p>
+</article>
+  </div>
+</section>
+
+      <section class="section-shell showcase" id="showcase" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">Showcase slot</p>
+    <h2>Make room for the rescue proof.</h2>
+    <p>A real rescue example belongs here: the dead source, the Wayback snapshot, and the rebuilt result. The page is ready for screenshots once the right site turns up.</p>
+  </div>
+  <div class="showcase-grid">
+    <article class="showcase-frame">
+  <div class="frame-placeholder">
+    <span>Source</span>
+  </div>
+  <h3>Broken WordPress source</h3>
+  <p>A screenshot of the site as found: missing media, old theme shell, dead plugin output, or whatever state it died in.</p>
+</article>
+<article class="showcase-frame">
+  <div class="frame-placeholder">
+    <span>Wayback</span>
+  </div>
+  <h3>Archived reference</h3>
+  <p>A Wayback snapshot showing what the site used to look like, useful details, and recovered evidence.</p>
+</article>
+<article class="showcase-frame">
+  <div class="frame-placeholder">
+    <span>Result</span>
+  </div>
+  <h3>Rebuilt Laravel site</h3>
+  <p>The finished rebuild: clean frontend, preserved content intent, routes kept sane, WordPress nowhere near production.</p>
+</article>
+  </div>
 </section>
 
       <section class="section-shell quick-start" id="quick-start" data-reveal>
@@ -195,7 +250,7 @@ $ php artisan gjallr:build --source-label=&quot;old site&quot; --format=both</co
       <section class="section-shell cta" data-reveal>
   <div>
     <h2>Start with the evidence.</h2>
-    <p>The repo has the commands, tests, and boundaries. The revived site is your job. Gjallr just makes the rubble legible.</p>
+    <p>The repo has the commands, tests, and boundaries. Gjallr makes the rubble legible so a builder and a frontend-capable AI can finish the actual site.</p>
   </div>
   <div class="cta-links">
     <a class="button button-secondary" href="https://github.com/odinns/gjallr">GitHub repo</a>

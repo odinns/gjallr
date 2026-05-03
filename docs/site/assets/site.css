@@ -145,8 +145,8 @@ code {
 
 .hero {
   display: grid;
-  min-height: calc(100vh - 5rem);
-  padding: 5.5rem 0 4rem;
+  min-height: calc(92vh - 5rem);
+  padding: 4.5rem 0 4rem;
   grid-template-columns: minmax(0, 1.02fr) minmax(20rem, 0.78fr);
   gap: 3rem;
   align-items: center;
@@ -177,13 +177,13 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
-  font-size: clamp(3.2rem, 11vw, 7.7rem);
+  max-width: 14ch;
+  font-size: clamp(2.55rem, 7vw, 5.2rem);
 }
 
 h2 {
-  max-width: 13ch;
-  font-size: clamp(2.25rem, 6vw, 4.8rem);
+  max-width: 14ch;
+  font-size: clamp(1.85rem, 3.8vw, 3.2rem);
 }
 
 h3 {
@@ -282,6 +282,8 @@ h3 {
 
 .feature-section,
 .section-band,
+.ai-handoff,
+.showcase,
 .quick-start,
 .boundary,
 .name-story,
@@ -316,7 +318,9 @@ h3 {
 }
 
 .feature-card p,
-.pipeline-list p {
+.pipeline-list p,
+.handoff-card p,
+.showcase-frame p {
   margin: 0.7rem 0 0;
   color: var(--muted);
   line-height: 1.62;
@@ -343,6 +347,62 @@ h3 {
   border-radius: 8px;
   padding: 1.15rem;
   background: rgba(13, 17, 24, 0.68);
+}
+
+.handoff-grid,
+.showcase-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.handoff-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.handoff-card {
+  min-height: 12rem;
+  border: 1px solid rgba(183, 243, 107, 0.28);
+  border-radius: 8px;
+  padding: 1.15rem;
+  background: linear-gradient(180deg, rgba(183, 243, 107, 0.08), rgba(17, 24, 33, 0.76));
+}
+
+.showcase {
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.showcase-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.showcase-frame {
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 0.8rem;
+  background: rgba(13, 17, 24, 0.7);
+}
+
+.frame-placeholder {
+  display: grid;
+  min-height: 15rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  border: 1px dashed rgba(125, 211, 252, 0.36);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(125, 211, 252, 0.08), rgba(183, 243, 107, 0.04)),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+  color: var(--quiet);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .step-marker {
@@ -428,11 +488,13 @@ h3 {
   }
 
   h1 {
-    max-width: 11ch;
+    max-width: 13ch;
   }
 
   .feature-grid,
-  .pipeline-list {
+  .pipeline-list,
+  .handoff-grid,
+  .showcase-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -468,12 +530,16 @@ h3 {
   }
 
   .feature-grid,
-  .pipeline-list {
+  .pipeline-list,
+  .handoff-grid,
+  .showcase-grid {
     grid-template-columns: 1fr;
   }
 
   .feature-section,
   .section-band,
+  .ai-handoff,
+  .showcase,
   .quick-start,
   .boundary,
   .name-story,

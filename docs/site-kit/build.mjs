@@ -12,6 +12,8 @@ const partialNames = [
   'hero',
   'sections',
   'pipeline',
+  'ai-handoff',
+  'showcase',
   'quick-start',
   'boundary',
   'name-story',
@@ -103,6 +105,29 @@ const pipelineSteps = (steps) =>
     )
     .join('\n');
 
+const cardItems = (items, className) =>
+  items
+    .map(
+      (item) => `<article class="${className}">
+  <h3>${escapeHtml(item.title)}</h3>
+  <p>${escapeHtml(item.body)}</p>
+</article>`,
+    )
+    .join('\n');
+
+const showcaseFrames = (frames) =>
+  frames
+    .map(
+      (frame) => `<article class="showcase-frame">
+  <div class="frame-placeholder">
+    <span>${escapeHtml(frame.label)}</span>
+  </div>
+  <h3>${escapeHtml(frame.title)}</h3>
+  <p>${escapeHtml(frame.body)}</p>
+</article>`,
+    )
+    .join('\n');
+
 const ensureRequiredFiles = async () => {
   await Promise.all([
     readFile(join(kitDir, 'templates', 'page.html'), 'utf8'),
@@ -135,6 +160,8 @@ const build = async () => {
     terminals: terminalBlocks(config.terminals),
     sections: featureSections(config.sections),
     pipelineSteps: pipelineSteps(config.pipeline.steps),
+    aiHandoffItems: cardItems(config.aiHandoff.items, 'handoff-card'),
+    showcaseFrames: showcaseFrames(config.showcase.frames),
     quickStartCommands: config.quickStart.commands.map((command) => `$ ${escapeHtml(command)}`).join('\n'),
     ctaLinks: linkList(config.cta.links, 'button button-secondary'),
   };
