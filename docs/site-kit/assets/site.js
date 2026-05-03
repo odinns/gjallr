@@ -15,7 +15,10 @@ if (!prefersReducedMotion.matches) {
     { rootMargin: '0px 0px -8% 0px' },
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item, index) => {
+    item.style.setProperty('--reveal-delay', `${Math.min(index * 45, 220)}ms`);
+    observer.observe(item);
+  });
 } else {
   document.querySelectorAll('[data-reveal]').forEach((item) => {
     item.classList.add('is-visible');
