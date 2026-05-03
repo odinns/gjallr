@@ -82,7 +82,7 @@ const featureSections = (sections) =>
   <div class="feature-grid">
     ${section.items
       .map(
-        (item) => `<article class="feature-card">
+        (item) => `<article class="handoff-card">
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.body)}</p>
     </article>`,

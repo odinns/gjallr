@@ -359,23 +359,10 @@ h3 {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.feature-card {
-  min-height: 13rem;
-  border: 1px solid var(--line-soft);
-  border-radius: 8px;
-  padding: 1.15rem;
-  background: rgba(17, 24, 33, 0.74);
-  transition:
-    border-color 220ms var(--ease-out),
-    box-shadow 220ms var(--ease-out),
-    transform 220ms var(--ease-out);
-}
-
-.feature-card p,
 .pipeline-list p,
 .handoff-card p,
 .showcase-frame p {
@@ -394,13 +381,13 @@ h3 {
   margin: 0;
   padding: 0;
   list-style: none;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .pipeline-list li {
   position: relative;
-  min-height: 14rem;
+  min-height: 12rem;
   border: 1px solid var(--line-soft);
   border-radius: 8px;
   padding: 1.15rem;
@@ -558,28 +545,24 @@ h3 {
   transform: translateY(0);
 }
 
-.is-visible .feature-card,
 .is-visible .pipeline-list li,
 .is-visible .handoff-card,
 .is-visible .showcase-frame {
   animation: child-rise 560ms var(--ease-out) both;
 }
 
-.is-visible .feature-card:nth-child(2),
 .is-visible .pipeline-list li:nth-child(2),
 .is-visible .handoff-card:nth-child(2),
 .is-visible .showcase-frame:nth-child(2) {
   animation-delay: 80ms;
 }
 
-.is-visible .feature-card:nth-child(3),
 .is-visible .pipeline-list li:nth-child(3),
 .is-visible .handoff-card:nth-child(3),
 .is-visible .showcase-frame:nth-child(3) {
   animation-delay: 150ms;
 }
 
-.is-visible .feature-card:nth-child(4),
 .is-visible .pipeline-list li:nth-child(4) {
   animation-delay: 220ms;
 }
@@ -593,7 +576,6 @@ h3 {
     transform: translateY(-1px);
   }
 
-  .feature-card:hover,
   .pipeline-list li:hover,
   .handoff-card:hover,
   .showcase-frame:hover {
@@ -804,7 +786,6 @@ h3 {
   .terminal code::after,
   .frame-placeholder::after,
   .step-marker,
-  .is-visible .feature-card,
   .is-visible .pipeline-list li,
   .is-visible .handoff-card,
   .is-visible .showcase-frame {
