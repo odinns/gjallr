@@ -1,10 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 74" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 130" role="img" aria-labelledby="title desc">
   <title id="title">Gjallr logo</title>
-  <desc id="desc">Gjallr wordmark with a small salvage signal mark.</desc>
-  <g fill="none" fill-rule="evenodd">
-    <path d="M14 21h27c8 0 14 6 14 14s-6 14-14 14H30" stroke="#7dd3fc" stroke-width="5" stroke-linecap="round"/>
-    <path d="M30 49l10-10M30 49l10 10" stroke="#7dd3fc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M14 32h21M14 43h14M52 17l7-7M59 27h9M54 37l8 5" stroke="#b7f36b" stroke-width="4" stroke-linecap="round"/>
-    <text x="78" y="50" fill="#f3f6f8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="42" font-weight="760" letter-spacing="0">Gjallr</text>
+  <desc id="desc">A cold blue route signal mark beside the Gjallr wordmark.</desc>
+  <defs>
+    <style>
+      .grid { stroke: #1a2730; stroke-width: 1.4; }
+      .line { fill: none; stroke: #42b8ff; stroke-width: 11; stroke-linecap: round; stroke-linejoin: round; }
+      .ghost { fill: none; stroke: #263b48; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; opacity: .7; }
+      .accent { fill: #a7ff38; }
+      .warn { fill: #ffb238; }
+      .text { fill: #e9f2f7; font-family: "IBM Plex Sans", "Inter", "Segoe UI", Arial, sans-serif; font-size: 82px; font-weight: 680; letter-spacing: -1px; }
+    </style>
+  </defs>
+  <g transform="translate(0 5)">
+    <path class="grid" d="M10 18H126M10 58H126M10 98H126M26 6V114M66 6V114M106 6V114"/>
+    <path class="ghost" d="M26 98H46M66 58H86M106 22H122"/>
+    <path class="line" d="M26 98H58V58H98V22H122"/>
+    <circle class="accent" cx="26" cy="98" r="9"/>
+    <circle class="accent" cx="98" cy="58" r="8"/>
+    <circle class="warn" cx="122" cy="22" r="8"/>
+  </g>
+  <g transform="translate(158 20)">
+    <text class="text" x="0" y="80">Gjallr</text>
   </g>
 </svg>

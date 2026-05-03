@@ -103,33 +103,15 @@ code {
   display: inline-flex;
   min-width: 0;
   align-items: center;
-  gap: 0.65rem;
   text-decoration: none;
 }
 
-.brand::after {
-  position: absolute;
-  left: 2.25rem;
-  top: 50%;
-  width: 1.4rem;
-  height: 1px;
-  content: "";
-  background: linear-gradient(90deg, rgba(125, 211, 252, 0.8), transparent);
-  opacity: 0;
-  transform: translateY(-50%) translateX(-0.45rem);
-  animation: brand-signal 3.2s var(--ease-out) infinite;
-}
-
-.brand-mark {
-  width: 38px;
-  height: 38px;
-  filter: drop-shadow(0 0 0 rgba(125, 211, 252, 0));
-  animation: mark-pulse 4.8s var(--ease-out) infinite;
-}
-
 .brand-wordmark {
-  width: 118px;
+  width: 178px;
   height: auto;
+  border-radius: 4px;
+  filter: drop-shadow(0 0 0 rgba(66, 184, 255, 0));
+  animation: mark-pulse 4.8s var(--ease-out) infinite;
 }
 
 .site-nav {
@@ -780,8 +762,7 @@ h3 {
     will-change: auto;
   }
 
-  .brand::after,
-  .brand-mark,
+  .brand-wordmark,
   .terminal::before,
   .terminal code::after,
   .frame-placeholder::after,
