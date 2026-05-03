@@ -339,7 +339,7 @@ h3 {
 }
 
 .section-intro h2 {
-  max-width: 12ch;
+  max-width: min(50vw, 580px);
 }
 
 .feature-grid {
@@ -571,8 +571,11 @@ h3 {
   .pipeline-list li:hover,
   .handoff-card:hover,
   .showcase-frame:hover {
-    border-color: rgba(125, 211, 252, 0.36);
-    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+    border-color: rgba(66, 184, 255, 0.78);
+    box-shadow:
+      0 0 0 1px rgba(66, 184, 255, 0.2),
+      0 0 26px rgba(66, 184, 255, 0.18),
+      0 18px 52px rgba(0, 0, 0, 0.28);
     transform: translateY(-3px);
   }
 }
