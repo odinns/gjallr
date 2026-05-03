@@ -329,14 +329,17 @@ h3 {
 
 .section-intro {
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 1fr);
-  gap: 2rem;
-  align-items: end;
-  margin-bottom: 2rem;
+  max-width: 760px;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
 }
 
 .section-intro p {
   margin: 0;
+}
+
+.section-intro h2 {
+  max-width: 12ch;
 }
 
 .feature-grid {
