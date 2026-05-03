@@ -4,6 +4,8 @@ Gjallr rescues dead WordPress sites into a clean Laravel application.
 
 It is not a CMS. It is not a WordPress clone. It pulls the useful material out of WordPress, keeps the runtime clean, and gives a human builder enough evidence to rebuild the site properly.
 
+Project site: <https://odinns.github.io/gjallr/>
+
 ## What It Does
 
 - Profiles WordPress dumps and site trees.

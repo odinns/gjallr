@@ -1,0 +1,131 @@
+{
+  "site": {
+    "name": "Gjallr",
+    "basePath": "/gjallr/",
+    "repoUrl": "https://github.com/odinns/gjallr",
+    "readmeUrl": "https://github.com/odinns/gjallr#readme",
+    "licenseUrl": "https://github.com/odinns/gjallr/blob/main/LICENSE",
+    "tagline": "Rescue dead WordPress sites. Rebuild them properly.",
+    "description": "Gjallr pulls content, comments, URLs, media evidence, and SEO context out of WordPress wreckage, then serves it from a clean Laravel runtime.",
+    "skin": "odinn-dark",
+    "logo": {
+      "mark": "assets/brand/gjallr-mark.svg",
+      "wordmark": "assets/brand/gjallr-logo.svg",
+      "favicon": "assets/brand/favicon.svg"
+    }
+  },
+  "nav": [
+    { "label": "Saves", "href": "#saves" },
+    { "label": "Pipeline", "href": "#pipeline" },
+    { "label": "Boundary", "href": "#boundary" },
+    { "label": "Name", "href": "#why-gjallr" }
+  ],
+  "hero": {
+    "eyebrow": "WordPress salvage for Laravel builders",
+    "title": "Rescue dead WordPress sites. Rebuild them properly.",
+    "body": "Gjallr extracts the useful ore from a broken WordPress install: content, comments, URLs, menus, media records, SEO fields, and enough archive evidence to rebuild with intent instead of panic.",
+    "primaryCta": { "label": "View on GitHub", "href": "https://github.com/odinns/gjallr" },
+    "secondaryCta": { "label": "Read the README", "href": "https://github.com/odinns/gjallr#readme" }
+  },
+  "terminals": [
+    {
+      "title": "Main rescue flow",
+      "lines": [
+        "php artisan gjallr:analyze-source",
+        "php artisan gjallr:import",
+        "php artisan gjallr:build"
+      ]
+    },
+    {
+      "title": "Wayback evidence flow",
+      "lines": [
+        "php artisan gjallr:analyze-source --with-wayback",
+        "php artisan gjallr:wayback:recover-media --dry-run --limit=50",
+        "php artisan gjallr:wayback:discover-urls --limit=500"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "saves",
+      "kicker": "What it saves",
+      "title": "The useful parts survive the fire.",
+      "body": "Gjallr keeps the material a builder actually needs, without dragging WordPress along for the ride.",
+      "items": [
+        { "title": "Content and structure", "body": "Posts, pages, taxonomies, menus, comments, nested comments, authors, slugs, and dates." },
+        { "title": "URLs and redirects", "body": "Legacy paths, query redirects, canonical hints, and enough routing evidence to avoid breaking old links." },
+        { "title": "Media evidence", "body": "Upload records, local file checks, recovered archive copies, and clear misses when a file is gone." },
+        { "title": "SEO context", "body": "Titles, descriptions, open graph fields, and the old clues that explain why a page mattered." }
+      ]
+    },
+    {
+      "id": "wayback",
+      "kicker": "Wayback",
+      "title": "Archive work is evidence, not magic.",
+      "body": "Internet Archive requests stay opt-in, bounded, and dry-run friendly. Gjallr can check availability, recover missing uploads, and suggest archived URLs. It does not pretend the archive is truth carved into stone.",
+      "items": [
+        { "title": "Bounded by default", "body": "Limits are explicit, user agents are required for real requests, and dry runs come first." },
+        { "title": "Media recovery", "body": "Missing uploads can be recovered into Gjallr-owned storage without overwriting local evidence by accident." },
+        { "title": "URL discovery", "body": "Archived HTML paths become suggestions. A builder still decides what belongs in the revived site." }
+      ]
+    },
+    {
+      "id": "refuses",
+      "kicker": "Refuses",
+      "title": "Not a WordPress-shaped shadow.",
+      "body": "Gjallr is not here to keep the old machine coughing. It extracts the salvage, then gets out of the way.",
+      "items": [
+        { "title": "No CMS cosplay", "body": "The rescued runtime is read-only. Editing belongs in the rebuild, not in the salvage rig." },
+        { "title": "No plugin theater", "body": "Themes and plugins are evidence. They are not reanimated." },
+        { "title": "No finished-site illusion", "body": "The build command writes dossiers. Humans and AI can use them to rebuild properly." }
+      ]
+    }
+  ],
+  "pipeline": {
+    "id": "pipeline",
+    "kicker": "Pipeline",
+    "title": "From source mess to rebuild dossier.",
+    "steps": [
+      { "title": "Analyze", "body": "Profile the SQL dump and site tree. Find WordPress versions, URLs, plugins, themes, uploads, and archive candidates." },
+      { "title": "Import", "body": "Map posts, pages, comments, media, terms, menus, and redirects into clean Laravel tables." },
+      { "title": "Serve", "body": "Browse the rescued content through normal Laravel routes. No WordPress boot. No plugin roulette." },
+      { "title": "Recover", "body": "Ask Wayback for missing media and URL evidence when the archive is useful and the limits are clear." },
+      { "title": "Build", "body": "Write reconstruction dossiers with inventories, paths, media status, redirects, and builder notes." }
+    ]
+  },
+  "quickStart": {
+    "id": "quick-start",
+    "kicker": "Quick start",
+    "title": "Run the rescue rig.",
+    "commands": [
+      "composer install",
+      "php artisan gjallr:analyze-source --sql-dump=/path/to/site.sql.gz --site-path=/path/to/site-root --source-label=\"old site\"",
+      "php artisan gjallr:import --sql-dump=/path/to/site.sql.gz --site-path=/path/to/site-root --source-label=\"old site\"",
+      "php artisan gjallr:build --source-label=\"old site\" --format=both"
+    ]
+  },
+  "boundary": {
+    "id": "boundary",
+    "kicker": "Boundary",
+    "title": "Keep the source mess out of the runtime.",
+    "body": "WordPress knowledge belongs in ingestion. Archive mechanics belong in Wayback. Runtime models, controllers, routes, and views stay clean. If `wp_*` leaks into the Laravel runtime, something has gone off the rails."
+  },
+  "nameStory": {
+    "id": "why-gjallr",
+    "kicker": "Why Gjallr?",
+    "title": "A short alarm, not a mythology essay.",
+    "body": "Gjallr nods at Gjallarhorn, the horn sounded to wake gods and announce the end of an age. That fits because a dead WordPress site is already the end of an age. Gjallr sounds the alarm, gathers what survived, and turns wreckage into evidence for a proper rebuild."
+  },
+  "cta": {
+    "title": "Start with the evidence.",
+    "body": "The repo has the commands, tests, and boundaries. The revived site is your job. Gjallr just makes the rubble legible.",
+    "links": [
+      { "label": "GitHub repo", "href": "https://github.com/odinns/gjallr" },
+      { "label": "README", "href": "https://github.com/odinns/gjallr#readme" },
+      { "label": "MIT license", "href": "https://github.com/odinns/gjallr/blob/main/LICENSE" }
+    ]
+  },
+  "footer": {
+    "text": "Built as a static project site. No Laravel runtime. No Jekyll. No ceremony."
+  }
+}

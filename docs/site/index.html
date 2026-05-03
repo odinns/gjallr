@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gjallr - Rescue dead WordPress sites. Rebuild them properly.</title>
+    <meta name="description" content="Gjallr pulls content, comments, URLs, media evidence, and SEO context out of WordPress wreckage, then serves it from a clean Laravel runtime.">
+    <meta property="og:title" content="Gjallr - Rescue dead WordPress sites. Rebuild them properly.">
+    <meta property="og:description" content="Gjallr pulls content, comments, URLs, media evidence, and SEO context out of WordPress wreckage, then serves it from a clean Laravel runtime.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#07090d">
+    <link rel="icon" href="/gjallr/assets/brand/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/gjallr/assets/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-reveal>
+  <a class="brand" href="/gjallr/" aria-label="Gjallr home">
+    <img class="brand-mark" src="/gjallr/assets/brand/gjallr-mark.svg" alt="" width="38" height="38">
+    <img class="brand-wordmark" src="/gjallr/assets/brand/gjallr-logo.svg" alt="Gjallr" width="118" height="34">
+  </a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-link" href="#saves">Saves</a>
+<a class="nav-link" href="#pipeline">Pipeline</a>
+<a class="nav-link" href="#boundary">Boundary</a>
+<a class="nav-link" href="#why-gjallr">Name</a>
+  </nav>
+</header>
+
+    <main id="main">
+      <section class="hero section-shell" data-reveal>
+  <div class="hero-copy">
+    <p class="kicker">WordPress salvage for Laravel builders</p>
+    <h1>Rescue dead WordPress sites. Rebuild them properly.</h1>
+    <p class="lede">Gjallr extracts the useful ore from a broken WordPress install: content, comments, URLs, menus, media records, SEO fields, and enough archive evidence to rebuild with intent instead of panic.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="https://github.com/odinns/gjallr">View on GitHub</a>
+      <a class="button button-secondary" href="https://github.com/odinns/gjallr#readme">Read the README</a>
+    </div>
+  </div>
+  <div class="terminal-stack" aria-label="Gjallr command examples">
+    <div class="terminal">
+  <div class="terminal-title">Main rescue flow</div>
+  <pre><code>$ php artisan gjallr:analyze-source
+$ php artisan gjallr:import
+$ php artisan gjallr:build</code></pre>
+</div>
+<div class="terminal">
+  <div class="terminal-title">Wayback evidence flow</div>
+  <pre><code>$ php artisan gjallr:analyze-source --with-wayback
+$ php artisan gjallr:wayback:recover-media --dry-run --limit=50
+$ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
+</div>
+  </div>
+</section>
+
+      <section class="section-shell feature-section" id="saves" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">What it saves</p>
+    <h2>The useful parts survive the fire.</h2>
+    <p>Gjallr keeps the material a builder actually needs, without dragging WordPress along for the ride.</p>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>Content and structure</h3>
+      <p>Posts, pages, taxonomies, menus, comments, nested comments, authors, slugs, and dates.</p>
+    </article>
+<article class="feature-card">
+      <h3>URLs and redirects</h3>
+      <p>Legacy paths, query redirects, canonical hints, and enough routing evidence to avoid breaking old links.</p>
+    </article>
+<article class="feature-card">
+      <h3>Media evidence</h3>
+      <p>Upload records, local file checks, recovered archive copies, and clear misses when a file is gone.</p>
+    </article>
+<article class="feature-card">
+      <h3>SEO context</h3>
+      <p>Titles, descriptions, open graph fields, and the old clues that explain why a page mattered.</p>
+    </article>
+  </div>
+</section>
+<section class="section-shell feature-section" id="wayback" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">Wayback</p>
+    <h2>Archive work is evidence, not magic.</h2>
+    <p>Internet Archive requests stay opt-in, bounded, and dry-run friendly. Gjallr can check availability, recover missing uploads, and suggest archived URLs. It does not pretend the archive is truth carved into stone.</p>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>Bounded by default</h3>
+      <p>Limits are explicit, user agents are required for real requests, and dry runs come first.</p>
+    </article>
+<article class="feature-card">
+      <h3>Media recovery</h3>
+      <p>Missing uploads can be recovered into Gjallr-owned storage without overwriting local evidence by accident.</p>
+    </article>
+<article class="feature-card">
+      <h3>URL discovery</h3>
+      <p>Archived HTML paths become suggestions. A builder still decides what belongs in the revived site.</p>
+    </article>
+  </div>
+</section>
+<section class="section-shell feature-section" id="refuses" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">Refuses</p>
+    <h2>Not a WordPress-shaped shadow.</h2>
+    <p>Gjallr is not here to keep the old machine coughing. It extracts the salvage, then gets out of the way.</p>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>No CMS cosplay</h3>
+      <p>The rescued runtime is read-only. Editing belongs in the rebuild, not in the salvage rig.</p>
+    </article>
+<article class="feature-card">
+      <h3>No plugin theater</h3>
+      <p>Themes and plugins are evidence. They are not reanimated.</p>
+    </article>
+<article class="feature-card">
+      <h3>No finished-site illusion</h3>
+      <p>The build command writes dossiers. Humans and AI can use them to rebuild properly.</p>
+    </article>
+  </div>
+</section>
+
+      <section class="section-shell section-band" id="pipeline" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">Pipeline</p>
+    <h2>From source mess to rebuild dossier.</h2>
+  </div>
+  <ol class="pipeline-list">
+    <li>
+  <span class="step-marker" aria-hidden="true"></span>
+  <div>
+    <h3>Analyze</h3>
+    <p>Profile the SQL dump and site tree. Find WordPress versions, URLs, plugins, themes, uploads, and archive candidates.</p>
+  </div>
+</li>
+<li>
+  <span class="step-marker" aria-hidden="true"></span>
+  <div>
+    <h3>Import</h3>
+    <p>Map posts, pages, comments, media, terms, menus, and redirects into clean Laravel tables.</p>
+  </div>
+</li>
+<li>
+  <span class="step-marker" aria-hidden="true"></span>
+  <div>
+    <h3>Serve</h3>
+    <p>Browse the rescued content through normal Laravel routes. No WordPress boot. No plugin roulette.</p>
+  </div>
+</li>
+<li>
+  <span class="step-marker" aria-hidden="true"></span>
+  <div>
+    <h3>Recover</h3>
+    <p>Ask Wayback for missing media and URL evidence when the archive is useful and the limits are clear.</p>
+  </div>
+</li>
+<li>
+  <span class="step-marker" aria-hidden="true"></span>
+  <div>
+    <h3>Build</h3>
+    <p>Write reconstruction dossiers with inventories, paths, media status, redirects, and builder notes.</p>
+  </div>
+</li>
+  </ol>
+</section>
+
+      <section class="section-shell quick-start" id="quick-start" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">Quick start</p>
+    <h2>Run the rescue rig.</h2>
+  </div>
+  <div class="terminal terminal-wide">
+    <div class="terminal-title">Commands</div>
+    <pre><code>$ composer install
+$ php artisan gjallr:analyze-source --sql-dump=/path/to/site.sql.gz --site-path=/path/to/site-root --source-label=&quot;old site&quot;
+$ php artisan gjallr:import --sql-dump=/path/to/site.sql.gz --site-path=/path/to/site-root --source-label=&quot;old site&quot;
+$ php artisan gjallr:build --source-label=&quot;old site&quot; --format=both</code></pre>
+  </div>
+</section>
+
+      <section class="section-shell boundary" id="boundary" data-reveal>
+  <p class="kicker">Boundary</p>
+  <h2>Keep the source mess out of the runtime.</h2>
+  <p>WordPress knowledge belongs in ingestion. Archive mechanics belong in Wayback. Runtime models, controllers, routes, and views stay clean. If `wp_*` leaks into the Laravel runtime, something has gone off the rails.</p>
+</section>
+
+      <section class="section-shell name-story" id="why-gjallr" data-reveal>
+  <p class="kicker">Why Gjallr?</p>
+  <h2>A short alarm, not a mythology essay.</h2>
+  <p>Gjallr nods at Gjallarhorn, the horn sounded to wake gods and announce the end of an age. That fits because a dead WordPress site is already the end of an age. Gjallr sounds the alarm, gathers what survived, and turns wreckage into evidence for a proper rebuild.</p>
+</section>
+
+      <section class="section-shell cta" data-reveal>
+  <div>
+    <h2>Start with the evidence.</h2>
+    <p>The repo has the commands, tests, and boundaries. The revived site is your job. Gjallr just makes the rubble legible.</p>
+  </div>
+  <div class="cta-links">
+    <a class="button button-secondary" href="https://github.com/odinns/gjallr">GitHub repo</a>
+<a class="button button-secondary" href="https://github.com/odinns/gjallr#readme">README</a>
+<a class="button button-secondary" href="https://github.com/odinns/gjallr/blob/main/LICENSE">MIT license</a>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+  <span>Built as a static project site. No Laravel runtime. No Jekyll. No ceremony.</span>
+  <a href="https://github.com/odinns/gjallr">github.com/odinns/gjallr</a>
+</footer>
+
+    <script src="/gjallr/assets/site.js" defer></script>
+  </body>
+</html>
