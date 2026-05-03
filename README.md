@@ -1,14 +1,15 @@
 # Gjallr
 
-Gjallr rescues dead WordPress sites into a clean Laravel application.
+Gjallr rescues dead backed-up websites into clean Laravel reconstruction paths.
 
-It is not a CMS. It is not a WordPress clone. It pulls the useful material out of WordPress, keeps the runtime clean, and gives a human builder enough evidence to rebuild the site properly.
+It started with WordPress because WordPress leaves excellent rubble. The larger job is older and messier: find the site root, pair the right SQL dump, understand what kind of site died, and give a human builder enough evidence to rebuild it properly.
 
 Project site: <https://odinns.github.io/gjallr/>
 
 ## What It Does
 
-- Profiles WordPress dumps and site trees.
+- Profiles WordPress dumps, site trees, and archive evidence.
+- Helps analyse custom PHP, static, mixed, and backup-folder mess before choosing an importer.
 - Imports posts, pages, comments, terms, menus, media records, SEO fields, and legacy query redirects.
 - Serves a read-only Laravel runtime without booting WordPress.
 - Recovers missing upload evidence from the Internet Archive when asked.
@@ -121,6 +122,12 @@ The dossier includes:
 - builder notes
 
 Artifacts are written under `storage/app/gjallr/build/`.
+
+## Agent Rescue Skill
+
+Gjallr includes a bundled agent skill at `skills/dead-site-rescue/SKILL.md`.
+
+Use it when the source is not obviously WordPress, or when the database dump sits beside the site instead of inside it. The skill forces the agent to inspect filesystem signals and SQL schema before deciding what kind of rescue is possible.
 
 ## Development
 

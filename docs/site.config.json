@@ -5,8 +5,8 @@
     "repoUrl": "https://github.com/odinns/gjallr",
     "readmeUrl": "https://github.com/odinns/gjallr#readme",
     "licenseUrl": "https://github.com/odinns/gjallr/blob/main/LICENSE",
-    "tagline": "Rescue dead WordPress sites. Rebuild them properly.",
-    "description": "Gjallr pulls content, comments, URLs, media evidence, and SEO context out of WordPress wreckage, then serves it from a clean Laravel runtime.",
+    "tagline": "Rescue dead backed-up websites. Rebuild them properly.",
+    "description": "Gjallr analyses old website folders, SQL dumps, media evidence, URLs, and archive clues, then turns the salvage into a Laravel reconstruction path.",
     "skin": "odinn-dark",
     "logo": {
       "mark": "assets/brand/gjallr-mark.svg",
@@ -17,15 +17,16 @@
   "nav": [
     { "label": "Saves", "href": "#saves" },
     { "label": "Pipeline", "href": "#pipeline" },
+    { "label": "Skill", "href": "#skills" },
     { "label": "AI handoff", "href": "#ai-handoff" },
     { "label": "Showcase", "href": "#showcase" },
     { "label": "Boundary", "href": "#boundary" },
     { "label": "Name", "href": "#why-gjallr" }
   ],
   "hero": {
-    "eyebrow": "WordPress salvage for Laravel builders",
-    "title": "Rescue dead WordPress sites. Rebuild them properly.",
-    "body": "Gjallr extracts the useful ore from a broken WordPress install, then writes the evidence a website builder can hand to an AI with frontend taste. Salvage first. Rebuild properly after.",
+    "eyebrow": "Dead site rescue for Laravel builders",
+    "title": "Rescue dead backed-up websites. Rebuild them properly.",
+    "body": "Gjallr finds the useful ore in old website folders, SQL dumps, WordPress installs, custom PHP projects, static exports, and archive snapshots. Then it writes the evidence a builder can hand to an AI with frontend taste.",
     "primaryCta": { "label": "View on GitHub", "href": "https://github.com/odinns/gjallr" },
     "secondaryCta": { "label": "Read the README", "href": "https://github.com/odinns/gjallr#readme" }
   },
@@ -52,9 +53,9 @@
       "id": "saves",
       "kicker": "What it saves",
       "title": "The useful parts survive the fire.",
-      "body": "Gjallr keeps the material a builder actually needs, without dragging WordPress along for the ride.",
+      "body": "Gjallr keeps the material a builder actually needs, without pretending every dead site was WordPress.",
       "items": [
-        { "title": "Content and structure", "body": "Posts, pages, taxonomies, menus, comments, nested comments, authors, slugs, and dates." },
+        { "title": "Content and structure", "body": "Posts, pages, custom records, generated HTML, menus, comments, authors, slugs, and dates." },
         { "title": "URLs and redirects", "body": "Legacy paths, query redirects, canonical hints, and enough routing evidence to avoid breaking old links." },
         { "title": "Media evidence", "body": "Upload records, local file checks, recovered archive copies, and clear misses when a file is gone." },
         { "title": "SEO context", "body": "Titles, descriptions, open graph fields, and the old clues that explain why a page mattered." }
@@ -74,11 +75,11 @@
     {
       "id": "refuses",
       "kicker": "Refuses",
-      "title": "Not a WordPress-shaped shadow.",
-      "body": "Gjallr is not here to keep the old machine coughing. It extracts the salvage, then gets out of the way.",
+      "title": "Not a dead-site cosplay engine.",
+      "body": "Gjallr is not here to keep the old machine coughing. It extracts the salvage, names the uncertainty, then gets out of the way.",
       "items": [
         { "title": "No CMS cosplay", "body": "The rescued runtime is read-only. Editing belongs in the rebuild, not in the salvage rig." },
-        { "title": "No plugin theater", "body": "Themes and plugins are evidence. They are not reanimated." },
+        { "title": "No framework guessing", "body": "WordPress, custom PHP, static exports, and backup folders get inspected before any importer is chosen." },
         { "title": "No finished-site illusion", "body": "The build command writes dossiers. A builder directs the rebuild. A frontend-capable AI can help turn the evidence into the finished Laravel site." }
       ]
     }
@@ -86,22 +87,34 @@
   "pipeline": {
     "id": "pipeline",
     "kicker": "Pipeline",
-    "title": "From source mess to rebuild dossier.",
+    "title": "From archive mess to rebuild dossier.",
     "steps": [
-      { "title": "Analyze", "body": "Profile the SQL dump and site tree. Find WordPress versions, URLs, plugins, themes, uploads, and archive candidates." },
-      { "title": "Import", "body": "Map posts, pages, comments, media, terms, menus, and redirects into clean Laravel tables." },
-      { "title": "Serve", "body": "Browse the rescued content through normal Laravel routes. No WordPress boot. No plugin roulette." },
+      { "title": "Identify", "body": "Find likely site roots and SQL dumps across old project folders, hosting backups, duplicated volumes, and dated snapshots." },
+      { "title": "Analyze", "body": "Inspect filesystem signals and SQL tables before deciding whether this is WordPress, custom PHP, static, mixed, or something worse." },
+      { "title": "Import", "body": "Map known source types into clean Laravel tables. When no importer exists, write the evidence and mapping plan first." },
+      { "title": "Serve", "body": "Browse rescued content through normal Laravel routes when a read-only runtime makes sense. No WordPress boot. No plugin roulette." },
       { "title": "Recover", "body": "Ask Wayback for missing media and URL evidence when the archive is useful and the limits are clear." },
       { "title": "Build", "body": "Write reconstruction dossiers with inventories, paths, media status, redirects, builder notes, and enough context for an AI-assisted frontend rebuild." }
+    ]
+  },
+  "skills": {
+    "id": "skills",
+    "kicker": "Bundled skill",
+    "title": "Teach the agent to stop guessing.",
+    "body": "The first rescue skill tells an agent how to analyse random old web projects before touching Laravel code. It treats WordPress as one case, not the default answer.",
+    "items": [
+      { "title": "Pair roots and dumps", "body": "Find likely site roots, nearby SQL dumps, dated backups, duplicated volume copies, and path/name clues that belong together." },
+      { "title": "Inspect before importing", "body": "Check entrypoints, config files, table names, prefixes, media folders, admin areas, and generated output before choosing a rescue path." },
+      { "title": "Daddy's Birthday rule", "body": "The demo case is not a WordPress proof. It is the reason Gjallr must handle custom PHP and archive mess without making lazy assumptions." }
     ]
   },
   "aiHandoff": {
     "id": "ai-handoff",
     "kicker": "AI handoff",
     "title": "The builder still drives.",
-    "body": "Gjallr is meant to hand a website builder clean evidence: rescued routes, content, media status, SEO clues, archive snapshots, and rebuild notes. The builder can then direct a frontend-skilled AI agent to produce the real site instead of guessing from rubble.",
+    "body": "Gjallr is meant to hand a website builder clean evidence: source classification, rescued routes, content, media status, SQL clues, archive snapshots, and rebuild notes. The builder can then direct a frontend-skilled AI agent to produce the real site instead of guessing from rubble.",
     "items": [
-      { "title": "Give the AI evidence", "body": "Use the dossier, JSON page views, recovered media paths, old URLs, and Wayback references as the source material." },
+      { "title": "Give the AI evidence", "body": "Use the dossier, schema notes, JSON page views, recovered media paths, old URLs, and Wayback references as the source material." },
       { "title": "Keep taste with the builder", "body": "The AI can draft layouts, components, copy structure, and responsive details. The builder decides what survives." },
       { "title": "Useful agent brief", "body": "Rebuild this as a clean Laravel frontend. Preserve content intent, routes, SEO context, and media evidence. Do not recreate WordPress." }
     ]
@@ -112,9 +125,9 @@
     "title": "Make room for the rescue proof.",
     "body": "A real rescue example belongs here: the dead source, the Wayback snapshot, and the rebuilt result. The page is ready for screenshots once the right site turns up.",
     "frames": [
-      { "label": "Source", "title": "Broken WordPress source", "body": "A screenshot of the site as found: missing media, old theme shell, dead plugin output, or whatever state it died in." },
+      { "label": "Source", "title": "Dead source", "body": "A screenshot of the site as found: missing media, old PHP shell, broken WordPress theme, static export, or whatever state it died in." },
       { "label": "Wayback", "title": "Archived reference", "body": "A Wayback snapshot showing what the site used to look like, useful details, and recovered evidence." },
-      { "label": "Result", "title": "Rebuilt Laravel site", "body": "The finished rebuild: clean frontend, preserved content intent, routes kept sane, WordPress nowhere near production." }
+      { "label": "Result", "title": "Rebuilt Laravel site", "body": "The finished rebuild: clean frontend, preserved content intent, routes kept sane, and the dead source nowhere near production." }
     ]
   },
   "quickStart": {
@@ -142,7 +155,7 @@
   },
   "cta": {
     "title": "Start with the evidence.",
-    "body": "The repo has the commands, tests, and boundaries. Gjallr makes the rubble legible so a builder and a frontend-capable AI can finish the actual site.",
+    "body": "The repo has the commands, tests, boundaries, and first rescue skill. Gjallr makes the rubble legible so a builder and a frontend-capable AI can finish the actual site.",
     "links": [
       { "label": "GitHub repo", "href": "https://github.com/odinns/gjallr" },
       { "label": "README", "href": "https://github.com/odinns/gjallr#readme" },

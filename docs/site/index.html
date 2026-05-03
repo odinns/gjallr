@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gjallr - Rescue dead WordPress sites. Rebuild them properly.</title>
-    <meta name="description" content="Gjallr pulls content, comments, URLs, media evidence, and SEO context out of WordPress wreckage, then serves it from a clean Laravel runtime.">
-    <meta property="og:title" content="Gjallr - Rescue dead WordPress sites. Rebuild them properly.">
-    <meta property="og:description" content="Gjallr pulls content, comments, URLs, media evidence, and SEO context out of WordPress wreckage, then serves it from a clean Laravel runtime.">
+    <title>Gjallr - Rescue dead backed-up websites. Rebuild them properly.</title>
+    <meta name="description" content="Gjallr analyses old website folders, SQL dumps, media evidence, URLs, and archive clues, then turns the salvage into a Laravel reconstruction path.">
+    <meta property="og:title" content="Gjallr - Rescue dead backed-up websites. Rebuild them properly.">
+    <meta property="og:description" content="Gjallr analyses old website folders, SQL dumps, media evidence, URLs, and archive clues, then turns the salvage into a Laravel reconstruction path.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#07090d">
     <link rel="icon" href="/gjallr/assets/brand/favicon.svg" type="image/svg+xml">
@@ -22,6 +22,7 @@
   <nav class="site-nav" aria-label="Main navigation">
     <a class="nav-link" href="#saves">Saves</a>
 <a class="nav-link" href="#pipeline">Pipeline</a>
+<a class="nav-link" href="#skills">Skill</a>
 <a class="nav-link" href="#ai-handoff">AI handoff</a>
 <a class="nav-link" href="#showcase">Showcase</a>
 <a class="nav-link" href="#boundary">Boundary</a>
@@ -32,9 +33,9 @@
     <main id="main">
       <section class="hero section-shell" data-reveal>
   <div class="hero-copy">
-    <p class="kicker">WordPress salvage for Laravel builders</p>
-    <h1>Rescue dead WordPress sites. Rebuild them properly.</h1>
-    <p class="lede">Gjallr extracts the useful ore from a broken WordPress install, then writes the evidence a website builder can hand to an AI with frontend taste. Salvage first. Rebuild properly after.</p>
+    <p class="kicker">Dead site rescue for Laravel builders</p>
+    <h1>Rescue dead backed-up websites. Rebuild them properly.</h1>
+    <p class="lede">Gjallr finds the useful ore in old website folders, SQL dumps, WordPress installs, custom PHP projects, static exports, and archive snapshots. Then it writes the evidence a builder can hand to an AI with frontend taste.</p>
     <div class="hero-actions">
       <a class="button button-primary" href="https://github.com/odinns/gjallr">View on GitHub</a>
       <a class="button button-secondary" href="https://github.com/odinns/gjallr#readme">Read the README</a>
@@ -60,12 +61,12 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
   <div class="section-intro">
     <p class="kicker">What it saves</p>
     <h2>The useful parts survive the fire.</h2>
-    <p>Gjallr keeps the material a builder actually needs, without dragging WordPress along for the ride.</p>
+    <p>Gjallr keeps the material a builder actually needs, without pretending every dead site was WordPress.</p>
   </div>
   <div class="feature-grid">
     <article class="feature-card">
       <h3>Content and structure</h3>
-      <p>Posts, pages, taxonomies, menus, comments, nested comments, authors, slugs, and dates.</p>
+      <p>Posts, pages, custom records, generated HTML, menus, comments, authors, slugs, and dates.</p>
     </article>
 <article class="feature-card">
       <h3>URLs and redirects</h3>
@@ -105,8 +106,8 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
 <section class="section-shell feature-section" id="refuses" data-reveal>
   <div class="section-intro">
     <p class="kicker">Refuses</p>
-    <h2>Not a WordPress-shaped shadow.</h2>
-    <p>Gjallr is not here to keep the old machine coughing. It extracts the salvage, then gets out of the way.</p>
+    <h2>Not a dead-site cosplay engine.</h2>
+    <p>Gjallr is not here to keep the old machine coughing. It extracts the salvage, names the uncertainty, then gets out of the way.</p>
   </div>
   <div class="feature-grid">
     <article class="feature-card">
@@ -114,8 +115,8 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
       <p>The rescued runtime is read-only. Editing belongs in the rebuild, not in the salvage rig.</p>
     </article>
 <article class="feature-card">
-      <h3>No plugin theater</h3>
-      <p>Themes and plugins are evidence. They are not reanimated.</p>
+      <h3>No framework guessing</h3>
+      <p>WordPress, custom PHP, static exports, and backup folders get inspected before any importer is chosen.</p>
     </article>
 <article class="feature-card">
       <h3>No finished-site illusion</h3>
@@ -127,28 +128,35 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
       <section class="section-shell section-band" id="pipeline" data-reveal>
   <div class="section-intro">
     <p class="kicker">Pipeline</p>
-    <h2>From source mess to rebuild dossier.</h2>
+    <h2>From archive mess to rebuild dossier.</h2>
   </div>
   <ol class="pipeline-list">
     <li>
   <span class="step-marker" aria-hidden="true"></span>
   <div>
+    <h3>Identify</h3>
+    <p>Find likely site roots and SQL dumps across old project folders, hosting backups, duplicated volumes, and dated snapshots.</p>
+  </div>
+</li>
+<li>
+  <span class="step-marker" aria-hidden="true"></span>
+  <div>
     <h3>Analyze</h3>
-    <p>Profile the SQL dump and site tree. Find WordPress versions, URLs, plugins, themes, uploads, and archive candidates.</p>
+    <p>Inspect filesystem signals and SQL tables before deciding whether this is WordPress, custom PHP, static, mixed, or something worse.</p>
   </div>
 </li>
 <li>
   <span class="step-marker" aria-hidden="true"></span>
   <div>
     <h3>Import</h3>
-    <p>Map posts, pages, comments, media, terms, menus, and redirects into clean Laravel tables.</p>
+    <p>Map known source types into clean Laravel tables. When no importer exists, write the evidence and mapping plan first.</p>
   </div>
 </li>
 <li>
   <span class="step-marker" aria-hidden="true"></span>
   <div>
     <h3>Serve</h3>
-    <p>Browse the rescued content through normal Laravel routes. No WordPress boot. No plugin roulette.</p>
+    <p>Browse rescued content through normal Laravel routes when a read-only runtime makes sense. No WordPress boot. No plugin roulette.</p>
   </div>
 </li>
 <li>
@@ -168,16 +176,38 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
   </ol>
 </section>
 
+      <section class="section-shell skills-section" id="skills" data-reveal>
+  <div class="section-intro">
+    <p class="kicker">Bundled skill</p>
+    <h2>Teach the agent to stop guessing.</h2>
+    <p>The first rescue skill tells an agent how to analyse random old web projects before touching Laravel code. It treats WordPress as one case, not the default answer.</p>
+  </div>
+  <div class="handoff-grid">
+    <article class="handoff-card">
+  <h3>Pair roots and dumps</h3>
+  <p>Find likely site roots, nearby SQL dumps, dated backups, duplicated volume copies, and path/name clues that belong together.</p>
+</article>
+<article class="handoff-card">
+  <h3>Inspect before importing</h3>
+  <p>Check entrypoints, config files, table names, prefixes, media folders, admin areas, and generated output before choosing a rescue path.</p>
+</article>
+<article class="handoff-card">
+  <h3>Daddy&#39;s Birthday rule</h3>
+  <p>The demo case is not a WordPress proof. It is the reason Gjallr must handle custom PHP and archive mess without making lazy assumptions.</p>
+</article>
+  </div>
+</section>
+
       <section class="section-shell ai-handoff" id="ai-handoff" data-reveal>
   <div class="section-intro">
     <p class="kicker">AI handoff</p>
     <h2>The builder still drives.</h2>
-    <p>Gjallr is meant to hand a website builder clean evidence: rescued routes, content, media status, SEO clues, archive snapshots, and rebuild notes. The builder can then direct a frontend-skilled AI agent to produce the real site instead of guessing from rubble.</p>
+    <p>Gjallr is meant to hand a website builder clean evidence: source classification, rescued routes, content, media status, SQL clues, archive snapshots, and rebuild notes. The builder can then direct a frontend-skilled AI agent to produce the real site instead of guessing from rubble.</p>
   </div>
   <div class="handoff-grid">
     <article class="handoff-card">
   <h3>Give the AI evidence</h3>
-  <p>Use the dossier, JSON page views, recovered media paths, old URLs, and Wayback references as the source material.</p>
+  <p>Use the dossier, schema notes, JSON page views, recovered media paths, old URLs, and Wayback references as the source material.</p>
 </article>
 <article class="handoff-card">
   <h3>Keep taste with the builder</h3>
@@ -201,8 +231,8 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
   <div class="frame-placeholder">
     <span>Source</span>
   </div>
-  <h3>Broken WordPress source</h3>
-  <p>A screenshot of the site as found: missing media, old theme shell, dead plugin output, or whatever state it died in.</p>
+  <h3>Dead source</h3>
+  <p>A screenshot of the site as found: missing media, old PHP shell, broken WordPress theme, static export, or whatever state it died in.</p>
 </article>
 <article class="showcase-frame">
   <div class="frame-placeholder">
@@ -216,7 +246,7 @@ $ php artisan gjallr:wayback:discover-urls --limit=500</code></pre>
     <span>Result</span>
   </div>
   <h3>Rebuilt Laravel site</h3>
-  <p>The finished rebuild: clean frontend, preserved content intent, routes kept sane, WordPress nowhere near production.</p>
+  <p>The finished rebuild: clean frontend, preserved content intent, routes kept sane, and the dead source nowhere near production.</p>
 </article>
   </div>
 </section>
@@ -250,7 +280,7 @@ $ php artisan gjallr:build --source-label=&quot;old site&quot; --format=both</co
       <section class="section-shell cta" data-reveal>
   <div>
     <h2>Start with the evidence.</h2>
-    <p>The repo has the commands, tests, and boundaries. Gjallr makes the rubble legible so a builder and a frontend-capable AI can finish the actual site.</p>
+    <p>The repo has the commands, tests, boundaries, and first rescue skill. Gjallr makes the rubble legible so a builder and a frontend-capable AI can finish the actual site.</p>
   </div>
   <div class="cta-links">
     <a class="button button-secondary" href="https://github.com/odinns/gjallr">GitHub repo</a>

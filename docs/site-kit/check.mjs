@@ -33,11 +33,13 @@ const run = async () => {
   assert(html.includes('href="/gjallr/assets/brand/favicon.svg"'), 'Favicon uses the GitHub Pages base path.');
   assert(html.includes('href="#saves"') && html.includes('id="saves"'), 'Navigation anchor for saves exists.');
   assert(html.includes('href="#pipeline"') && html.includes('id="pipeline"'), 'Navigation anchor for pipeline exists.');
+  assert(html.includes('href="#skills"') && html.includes('id="skills"'), 'Navigation anchor for skills exists.');
   assert(html.includes('href="#ai-handoff"') && html.includes('id="ai-handoff"'), 'Navigation anchor for AI handoff exists.');
   assert(html.includes('href="#showcase"') && html.includes('id="showcase"'), 'Navigation anchor for showcase exists.');
   assert(html.includes('https://github.com/odinns/gjallr'), 'External links point to the GitHub repo.');
   assert(html.includes('php artisan gjallr:wayback:recover-media --dry-run --limit=50'), 'Wayback terminal specimen is present.');
   assert(html.includes('frontend-capable AI'), 'AI-assisted rebuild handoff copy is present.');
+  assert(html.includes("Daddy&#39;s Birthday"), 'Daddy Birthday motivating example is present.');
   assert(html.includes('Wayback snapshot') || html.includes('Archived reference'), 'Wayback comparison showcase copy is present.');
   assert(css.includes('@media (prefers-reduced-motion: reduce)'), 'Reduced-motion CSS is present.');
   assert(js.includes('prefers-reduced-motion: reduce'), 'Reduced-motion JS guard is present.');
